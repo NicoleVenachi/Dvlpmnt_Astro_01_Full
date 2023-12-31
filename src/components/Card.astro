@@ -1,0 +1,32 @@
+---
+// definimos los typos de las props a recibir
+interface Props {
+  title: string;
+  content?: string;
+}
+const { title, content = 'content default'} = Astro.props; // sino recibo, pone el default
+---
+
+<div class="card">
+  <h1>{title}</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis
+    suscipit urna nec pellentesque. Sed scelerisque posuere ligula, a congue
+    erat aliquet vitae
+  </p>
+</div>
+
+<style>
+  .card {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.2),
+      0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    /* eje x, y */
+    padding: 20px;
+    width: 300px;
+    margin-bottom: 10px;
+    color: #202020;
+  }
+</style>
