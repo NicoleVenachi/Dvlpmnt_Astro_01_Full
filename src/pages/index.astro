@@ -1,8 +1,31 @@
 ---
+// production code
+const color = "danger";
 
+const hobbies = ["Programming", "Read", "Watching movies", "Write"];
+const isActive = true
 ---
 
-<h1 class="title">Test</h1>
+<!-- con programmability  -->
+{
+  hobbies.map((hobbie) => (
+    <h1 class={color}>{hobbie}</h1>
+  ))
+}
+
+{
+  isActive && (<h1 class={color}> Tamo acitvos </h1>)
+}
+{
+  !isActive && (<h1 class={color}> No tamo acitvos </h1>)
+}
+
+<!-- 
+	sin mucha programability
+	<h1 class={color}>{hobbies[0]}</h1>
+	<h1 class={color}>{hobbies[1]}</h1>
+	<h1 class={color}>{hobbies[2]}</h1>
+ -->
 
 <style>
   body {
@@ -10,6 +33,9 @@
   }
   .title {
     color: aqua;
+  }
+  .danger {
+    color: red;
   }
 </style>
 
