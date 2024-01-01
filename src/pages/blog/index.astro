@@ -1,0 +1,30 @@
+---
+import Layout from "../../components/Layout.astro"
+
+//import multiple files
+const posts = await Astro.glob("./posts/*.md")
+console.log(posts);
+
+---
+
+<Layout pageTitle="Development blog" pageDescription="Development and programming tuytorial">
+  <h1> Blog </h1>
+
+  {
+    posts.map(post => (
+      // con frontmatter accedo a sus par key:values
+      <a href={post.url} class="link">{post.frontmatter.title}</a>
+    ))
+  }
+
+  <style>
+    .link {
+      background: wheat;
+      color: black;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 4px;
+    }
+  </style>
+
+</Layout>
