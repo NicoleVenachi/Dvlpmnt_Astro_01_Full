@@ -1,0 +1,35 @@
+---
+
+interface Props {
+  pageTitle?: string;
+  pageDescription?: string;
+}
+const {pageTitle="", pageDescription} = Astro.props
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Astro curso | {pageTitle} </title>
+  <meta name="description" content={pageDescription}> 
+  <!-- desc -> para decirle a los buscadores de qué se trata la page, es la descripcion de cuando buscamos algo en google. Básicamente para SEO -->
+
+</head>
+<body>
+
+  <!-- parte dinámica -->
+  <slot/>
+
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #202020;
+    }
+  </style>
+
+</body>
+</html>
+

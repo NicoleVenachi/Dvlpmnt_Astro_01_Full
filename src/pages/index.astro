@@ -1,56 +1,9 @@
 ---
-// production code
-const color = "danger";
-
-const hobbies = ["Programming", "Read", "Watching movies", "Write"];
-const isActive = true
+import Layout from "../components/Layout.astro";
 ---
 
-<!-- con programmability  -->
-{
-  hobbies.map((hobbie) => (
-    <h1 class={color}>{hobbie}</h1>
-  ))
-}
+<Layout pageTitle="Home" pageDescription="Page to offer Sw services">
+  <h1> Home page </h1>
+  <p> Welcome to the blog </p>
+</Layout>
 
-{
-  isActive && (<h1 class={color}> Tamo acitvos </h1>)
-}
-{
-  !isActive && (<h1 class={color}> No tamo acitvos </h1>)
-}
-
-<!-- 
-	sin mucha programability
-	<h1 class={color}>{hobbies[0]}</h1>
-	<h1 class={color}>{hobbies[1]}</h1>
-	<h1 class={color}>{hobbies[2]}</h1>
- -->
-
-<style>
-  body {
-    background-color: black;
-  }
-  .title {
-    color: aqua;
-  }
-  .danger {
-    color: red;
-  }
-</style>
-
-<script>
-  console.log("Prueba");
-</script>
-<!-- <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html> -->

@@ -6,26 +6,27 @@ const posts_data = await response.json();
 
 // console.log(posts_data);
 
+import Layout from "../components/Layout.astro";
+
 ---
 
-<h1> My Posts </h1>
+<Layout pageTitle="All posts">
+  
+  <h1> My Posts </h1>
 
-{
-  posts_data.map(post => (
-    <div>
-      <h5>{post.userId}</h5>
-      <h3 class="title">{post.title}</h3>
-      <p style="color: #333">{post.body}</p>
-    </div>
-  ))
-}
-
-<style>
-  body {
-    background-color: darkslategray;
+  {
+    posts_data.map(post => (
+      <div>
+        <h5>{post.userId}</h5>
+        <h3 class="title">{post.title}</h3>
+        <p style="color: #333">{post.body}</p>
+      </div>
+    ))
   }
-  .title {
-    color: skyblue;
-  }
-</style>
 
+  <style>
+    .title {
+      color: skyblue;
+    }
+  </style>
+</Layout>

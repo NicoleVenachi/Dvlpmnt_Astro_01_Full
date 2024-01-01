@@ -1,15 +1,9 @@
 ---
 import Card from '../components/Card.astro'
+import Layout from '../components/Layout.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My services</title>
-</head>
-<body>
+<Layout pageTitle='Services'>
   <h1>My services</h1>
 
   <Card title="Card 1"/>
@@ -22,5 +16,5 @@ import Card from '../components/Card.astro'
       color: #202020;
     }
   </style>
-</body>
-</html>
+</Layout>
+
