@@ -1,9 +1,14 @@
 ---
 import Layout from "../components/Layout.astro";
+import SuscribeButton from "../components/SuscribeButton";
 ---
 
 <Layout pageTitle="Home" pageDescription="Page to offer Sw services">
   <h1> Home page </h1>
   <p> Welcome to the blog </p>
+
+  <!-- notification button  -->
+  <SuscribeButton client:visible/>
+
 </Layout>
 
