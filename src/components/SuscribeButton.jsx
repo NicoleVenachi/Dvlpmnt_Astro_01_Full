@@ -12,7 +12,7 @@ const SuscribeButton = () => {
 
   return (
     <>
-      <button onClick={() => {
+      <button className='bg-blue-400 rounded-md' onClick={() => {
         toast.success('Great! You have successfully signed up')
         setSuscribe(prev => !prev)
       }
